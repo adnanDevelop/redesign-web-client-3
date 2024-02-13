@@ -14,6 +14,7 @@
   --dark-black: #0b0b13;
   --green: #2fbf71;
   --blue: #0a6986;
+  --gray: #8a8a8a;
 
   /* FONT FAMILIES */
   --primary-font: "Montserrat", sans-serif;
@@ -34,8 +35,15 @@ body {
   font-family: var(--secondary-font);
 }
 
-/* CUSTOM SCROLLBAR */
+.text-gray {
+  color: var(--gray);
+}
 
+.text-green {
+  color: var(--green);
+}
+
+/* CUSTOM SCROLLBAR */
 body::-webkit-scrollbar {
   width: 0.7rem;
   border-radius: 50%;
@@ -54,6 +62,32 @@ body::-webkit-scrollbar-thumb:hover {
 
 body::-webkit-scrollbar-track {
   background-color: var(--white);
+}
+
+h1 {
+  font-size: 4.5rem !important;
+  font-weight: 700 !important;
+  color: var(--black);
+  font-family: var(--secondary-font);
+}
+
+h4 {
+  font-size: 2rem !important;
+  color: var(--black);
+  font-weight: 700;
+}
+
+/* CUSTOM CSS */
+.btn-primary {
+  width: 10rem !important;
+  height: 4rem !important;
+  font-size: 1.4rem !important;
+  border-radius: 0px !important;
+  color: var(--white) !important;
+  background-color: var(--green) !important;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 0.1rem solid transparent !important;
 }
 
 /* TOP SCROLL BUTTON SECTION */
@@ -211,10 +245,10 @@ body::-webkit-scrollbar-track {
 }
 
 .dropdown-menu {
-    min-width: 15rem !important;
-    border-bottom: 0.2rem solid var(--green) !important;
-    border-radius: 0.5rem  0.5rem 1rem 1rem !important;
-    overflow-x: hidden;
+  min-width: 15rem !important;
+  border-bottom: 0.2rem solid var(--green) !important;
+  border-radius: 0.5rem 0.5rem 1rem 1rem !important;
+  overflow-x: hidden;
 }
 
 .dropdown-menu[data-bs-popper] {
@@ -233,8 +267,146 @@ body::-webkit-scrollbar-track {
   transition: var(--transition);
 }
 
+/* ------------------------------- HERO SECTION ---------------------------------- */
+.hero_section {
+  width: 100%;
+  height: 80vh;
+  padding-top:15rem ;
+  background: url('/image/hero-bg.svg');
+}
+
+.hero_content p {
+  font-size: 1.6rem;
+  color: var(--black);
+  font-family: var(--primary-font);
+  font-weight: 500 !important;
+} 
+
+.hero_content .content {
+  font-family: var(--primary-font);
+  color: var(--dark-black);
+  text-align: justify;
+  text-align-last: left;
+}
+
+.hero_img {
+  z-index: 1;
+}
+
+.hero_img::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0.5rem solid var(--green);
+  z-index: -1;
+}
 
 /* ------------------------------- NAVBAR SECTION ---------------------------------- */
 /* ------------------------------- NAVBAR SECTION ---------------------------------- */
-/* ------------------------------- NAVBAR SECTION ---------------------------------- */
-/* ------------------------------- NAVBAR SECTION ---------------------------------- */
+
+/* ------------------------------- FOOTER SECTION ---------------------------------- */
+.footer_content p {
+  text-align: justify;
+  text-align-last: left;
+  font-size: 1.5rem;
+  color: var(--gray);
+}
+
+.footer_link li a {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.2rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--gray);
+  text-transform: capitalize;
+  position: relative;
+  transition: var(--transition);
+}
+
+.footer_link li a:hover,
+.footer_link li a:focus {
+  color: var(--green);
+}
+
+.footer_link li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0.15rem;
+  border-radius: 2rem;
+  background-color: var(--green);
+  transition: var(--transition);
+}
+
+.footer_link li a:hover::before,
+.footer_link li a:focus::before {
+  width: 100%;
+}
+
+.footer_icon i {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  color: var(--gray);
+  border: 0.1rem solid var(--gray);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+}
+
+.footer_icon i::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--green);
+  z-index: -1;
+  transform: scale(0);
+  transition: var(--transition);
+}
+
+.footer_icon i:hover,
+.footer_icon i:focus {
+  border-color: var(--green);
+  color: var(--white);
+}
+
+.footer_icon i:hover::after,
+.footer_icon i:focus::after {
+  transform: scale(1);
+}
+
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.subscribe_input .form-control {
+  width: 100%;
+  height: 4.5rem;
+  border-radius: 0px;
+  font-size: 1.4rem;
+  border: 0.1rem solid var(--gray);
+  transition: var(--transition);
+}
+
+.subscribe_input .form-control:focus {
+  border-color: var(--green);
+}
+
+.subfooter p {
+  font-size: 1.4rem;
+}

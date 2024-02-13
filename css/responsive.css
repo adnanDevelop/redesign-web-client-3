@@ -1,5 +1,10 @@
 /* MAX-WIDTH 992PX */
 @media (max-width: 992px) {
+  /* CUSTOM CSS */
+  h1 {
+    font-size: 3.5rem !important;
+  }
+
   /* NAVBAR SECTION START  */
   .navbar {
     height: 6.5rem;
@@ -45,7 +50,7 @@
 @media (max-width: 772px) {
   /* CUSTOM CSS */
   h1 {
-    font-size: 3.5rem !important;
+    font-size: 2.8rem !important;
   }
   h2 {
     font-size: 3rem !important;
@@ -64,6 +69,20 @@
   .section-padding {
     padding-block: 4.5rem;
   }
+
+  /* HERO SECTION */
+  .hero_section  {
+    padding-top: 10rem;
+  }
+
+  .hero_content .content {
+    font-size: 1.4rem !important;
+  }
+
+  .hero_img::before {
+    display: none;
+  }
+
 }
 /* MAX-WIDTH 568PX */
 @media (max-width: 568px) {
