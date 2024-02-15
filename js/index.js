@@ -1,6 +1,6 @@
 const navbar = document.querySelector(".navbar");
 const topBtn = document.getElementById("topBtn");
-const navbarMenu = document.querySelector('.navbar-collapse');
+const navbarMenu = document.querySelector(".navbar-collapse");
 const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 const closeNavLink = document.querySelectorAll(".close_nav");
 
@@ -28,13 +28,12 @@ navLinks.forEach(function (navLink) {
   });
 });
 
-
 // CLOSE NAVBAR MENU WHEN USER CLICK ON NAV LINK
-closeNavLink.forEach(element => {
-    element.addEventListener('click' , () => {
-        navbarMenu.classList.remove('show')
-    })
-})
+closeNavLink.forEach((element) => {
+  element.addEventListener("click", () => {
+    navbarMenu.classList.remove("show");
+  });
+});
 
 // TOP BTN ANIMATION
 
@@ -61,8 +60,7 @@ const scrollAnimation = () => {
 // Add event listener to update the gradient on scroll
 window.addEventListener("scroll", scrollAnimation);
 
-
-// SWIPER JS 
+// SWIPER JS
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -75,8 +73,8 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   breakpoints: {
-    640: {
-      slidesPerView: 2,
+    380: {
+      slidesPerView: 1,
       spaceBetween: 20,
     },
     768: {
@@ -88,4 +86,21 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
     },
   },
+});
+
+// FILTER BUTTONS SECTION
+const filterBtn = document.querySelectorAll(".filter_btn button");
+console.log(filterBtn);
+
+filterBtn.forEach((element) => {
+  element.addEventListener("click", () => {
+    filterBtn.forEach(element => {
+      return element.classList.remove('active')
+    })
+    if (element.classList.contains("active")) {
+      element.classList.remove("active");
+    } else {
+      element.classList.add("active");
+    }
+  });
 });

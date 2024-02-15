@@ -44,7 +44,14 @@
   .navbar-collapse {
     padding: 2rem 0 2rem 2rem;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--white);
   }
+
+  /* FILTER  SECTION */
+  .filter_btn  {
+    width: 50%;
+  }
+
 }
 /* MAX-WIDTH 772PX */
 @media (max-width: 772px) {
@@ -53,7 +60,7 @@
     font-size: 2.8rem !important;
   }
   h2 {
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
   }
   h3 {
     font-size: 2rem !important;
@@ -66,12 +73,12 @@
     font-size: 1.5rem;
   }
 
-  .section-padding {
+  .padding-block {
     padding-block: 4.5rem;
   }
 
   /* HERO SECTION */
-  .hero_section  {
+  .hero_section {
     padding-top: 10rem;
   }
 
@@ -85,14 +92,32 @@
     border: 0.3rem solid var(--green);
   }
 
+  /* FILTER  SECTION */
+  .filter_btn  {
+    width: 85%;
+  }
+
+  /* FAQ PAGE */
+  .faq_header {
+    padding-bottom: 1em !important;
+  }
+  
+  .faq_img img {
+    width:100%;
+  }
+
 }
+
+
+
 /* MAX-WIDTH 568PX */
 @media (max-width: 568px) {
   /* CUSTOM CSS */
 
   h2 {
-    font-size: 2.8rem !important;
+    font-size: 2.2rem !important;
   }
+
   h4 {
     font-size: 1.8rem !important;
   }
@@ -112,6 +137,22 @@
   .navbar-brand h3 {
     font-size: 3rem !important;
   }
+
+  /* REVIEW SECTION */
+
+  .review_header {
+    padding-bottom: 1rem !important;
+  }
+
+  .swiper {
+    padding-bottom: 1.5rem !important;
+  }
+
+  /* FAQ PAGE */
+  .accordion-button , .accordion-body {
+    font-size: 1.3rem !important;
+  }
+
 }
 /* MAX-WIDTH 420px */
 @media (max-width: 420px) {

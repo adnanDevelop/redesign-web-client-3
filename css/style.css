@@ -43,6 +43,18 @@ body {
   color: var(--green);
 }
 
+.text-blue {
+  color: var(--blue);
+}
+
+.font-primary {
+  font-family: var(--primary-font) !important;
+}
+
+.font-secondary {
+  font-family: var(--secondary-font) !important;
+}
+
 /* CUSTOM SCROLLBAR */
 body::-webkit-scrollbar {
   width: 0.7rem;
@@ -92,23 +104,24 @@ p {
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--gray);
+  font-family: var(--secondary-font);
 }
 
-.section-padding {
+.padding-block {
   padding-block: 9rem;
-} 
+}
 
 /* CUSTOM CSS */
 .btn-primary {
-  width: 10rem !important;
-  height: 4rem !important;
+  padding: 1rem 2rem !important;
   font-size: 1.4rem !important;
   border-radius: 0px !important;
   color: var(--white) !important;
   background-color: var(--green) !important;
-  font-weight: 600;
+  font-weight: 600 !important;
   text-transform: capitalize;
   border: 0.1rem solid transparent !important;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
 }
 
 /* TOP SCROLL BUTTON SECTION */
@@ -291,8 +304,9 @@ p {
 /* ------------------------------- HERO SECTION ---------------------------------- */
 .hero_section {
   width: 100%;
-  padding-top:15rem ;
-  background: url('/image/hero-bg.svg');
+  padding-top: 15rem;
+  padding-bottom: 4rem;
+  background: url("/image/hero-bg.svg");
 }
 
 .hero_content p {
@@ -300,7 +314,7 @@ p {
   color: var(--black);
   font-family: var(--primary-font);
   font-weight: 500 !important;
-} 
+}
 
 .hero_content .content {
   font-family: var(--primary-font);
@@ -314,7 +328,7 @@ p {
 }
 
 .hero_img::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 2rem;
   left: 2rem;
@@ -326,9 +340,86 @@ p {
 }
 
 /* ------------------------------- PLAN AND REVIEW SECTION ---------------------------------- */
+
 .plan_header p {
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.filter_btn {
+  margin-top: 3rem !important;
+  width: 30%;
+  height: 4.5rem;
+  margin-inline: auto;
+  border-radius: 5rem;
+  border: 0.2rem solid var(--light-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter_btn button {
+  width: 47%;
+  height: 3.5rem;
+  border-radius: 5rem;
+  border: none;
+  font-weight: 600 !important;
+  font-size: 1.4rem;
+  transition: var(--transition);
+}
+
+.filter_btn button.active {
+  color: var(--white);
+  background-color: var(--green);
+}
+
+.plan_img {
+  padding-block: 1rem;
+  border-bottom: 0.1px solid var(--light-white);
+}
+
+.plan_img p {
+  font-size: 1.8rem !important  ;
+  color: var(--blue) !important;
+}
+
+.country_badge {
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+  border: 0.1rem solid var(--light-white);
+  font-weight: 700;
+  color: var(--blue);
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+}
+
+.plan_content ul li {
+  border-bottom: 0.1px solid var(--light-white);
+}
+
+.plan_btn {
+  display: block;
+  width: 100%;
+  padding-block: 1rem;
+  text-align: center;
+  border: 0.15rem solid var(--green);
+  color: var(--green);
+  border-radius: 0.6rem;
+  background-color: transparent;
+  font-size: 1.4rem;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.plan_btn:hover,
+.plan_btn:focus {
+  color: var(--white);
+  background-color: var(--green);
+}
+
+.review_header {
+  padding-bottom: 4rem !important;
 }
 
 .review-img img {
@@ -337,9 +428,235 @@ p {
   object-fit: cover;
 }
 
-/* ------------------------------- BENEFIT SECTION ---------------------------------- */
+.review_star i {
+  color: rgb(253, 204, 13);
+}
+
+.swiper {
+  padding-bottom: 3rem !important;
+}
+
+.swiper-pagination-bullet {
+  width: 0.8rem !important;
+  height: 0.8rem !important;
+  border-radius: 0px !important;
+  transform: rotate(45deg);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--green) !important;
+}
+
+/* ------------------------------- REFUND SECTION ---------------------------------- */
+.refund_section {
+  border-radius: 2rem;
+  background-color: #66b9524c;
+  padding-block: 5rem;
+}
+
+.refund_img img {
+  width: 200px !important;
+  display: block;
+  margin-inline: auto;
+}
+
+.refund_content p {
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.refund_content button {
+  width: 200px;
+  height: 40px;
+  border-radius: 1rem;
+  background-color: var(--dark-black);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: var(--secondary-font);
+  border: none;
+  transition: var(--transition);
+}
+
+.refund_content button:hover,
+.refund_content button:focus {
+  transform: scale(1.04);
+}
+
+/* ------------------------------- ABOUT PAGE START  ---------------------------------- */
+.about_header {
+  margin-top: 5rem;
+  width: 100%;
+  height: 50vh;
+  background: url(/image/about-bg.jpg) no-repeat center;
+  background-size: cover;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about_header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.page_header_link {
+  color: var(--white) !important;
+  text-decoration: none !important;
+}
+
+/* ------------------------------- FAQ PAGE ---------------------------------- */
+.faq_header {
+  margin-top: 10rem;
+  width: 100%;
+  padding-bottom: 8rem;
+}
+
+.faq_img img {
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+
+.faq_question_img img {
+  width: 90%;
+  height: auto;
+}
+
+.faq_search_bar {
+  width: 100%;
+  height: 4rem;
+  border-radius: 2rem;
+  border: 0.1rem solid var(--light-white);
+}
+
+.faq_search_bar:focus {
+  border-color: var(--green);
+}
+
+.faq_search_bar .form-control {
+  border: none;
+  height: auto;
+  font-size: 1.4rem;
+  padding-left: 1rem;
+  border-radius: 2rem;
+  border: none;
+  transition: var(--transition);
+}
+
+.faq_search_bar .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.faq_search_bar button {
+  width: 3.5em;
+  height: 3.2rem;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  color: var(--white);
+  background-color: var(--green);
+  transition: var(--transition);
+}
+
+.faq_search_bar button:hover ,
+.faq_search_bar button:focus {
+  background-color: var(--blue);
+}
+
+.accordion-button {
+  padding-block: 1.5rem !important;
+  font-size: 1.5rem !important;
+  border-bottom: 0.1rem solid var(--light-white) !important;
+
+}
+
+.accordion-button:focus  {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--green) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--green) !important;
+  color: var(--white) !important;
+  border-color: var(--green);
+}
+
+
+.accordion-body {
+  font-size: 1.5rem !important; 
+  color: var(--gray);
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* ------------------------------- CONTACT PAGE SECTION ---------------------------------- */
+.contact_section {
+  margin-top: 10rem;
+}
+
+.address i {
+  font-size: 2.5rem;
+  color: var(--green);
+}
+
+.link {
+  font-size: 1.4rem;
+  color: var(--gray);
+  transition: var(--transition);
+}
+
+.link:hover ,
+.link:focus {
+  color : var(--green);
+}
+
+.contact_form .form-control {
+  border: 0.1rem solid var(--light-white);
+  transition: var(--transition);
+  font-size: 1.4rem;
+}
+
+.contact_form .form-control:focus {
+  border-color: var(--green);
+}
+
+.submit-btn {
+  width : 12rem;
+  height: 4rem;
+  border: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 3rem;
+  color: var(--white);
+  background-color: var(--green);
+  transition: var(--transition);
+}
+
+.submit-btn:hover ,
+.submit-btn:focus {
+  transform: scale(1.04);
+  background-color: var(--blue);
+}
+
+/* ------------------------------- TEAM PAGE SECTION ---------------------------------- */
+
+
 
 /* ------------------------------- FOOTER SECTION ---------------------------------- */
+footer {
+  margin-top: 8rem;
+}
+
 .footer_content p {
   text-align: justify;
   text-align-last: left;
@@ -427,7 +744,7 @@ p {
 }
 .subscribe_input .form-control {
   width: 100%;
-  height: 4.5rem;
+  height: 4.2rem;
   border-radius: 0px;
   font-size: 1.4rem;
   border: 0.1rem solid var(--gray);
