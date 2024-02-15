@@ -4,16 +4,6 @@ const navbarMenu = document.querySelector(".navbar-collapse");
 const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 const closeNavLink = document.querySelectorAll(".close_nav");
 
-// NAVBAR SCROLL ANIMATION
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    navbar.classList.add("animate");
-    topBtn.classList.add("icon-animate");
-  } else {
-    navbar.classList.remove("animate");
-    topBtn.classList.remove("icon-animate");
-  }
-});
 
 // Add click event listener to each nav link
 navLinks.forEach(function (navLink) {

@@ -12,9 +12,13 @@
   --light-white: #c4cfde;
   --black: #000;
   --dark-black: #0b0b13;
-  --green: #2fbf71;
+  --green: #48ec86;
+  --light-green: #edf9fe;
   --blue: #0a6986;
   --gray: #8a8a8a;
+  --border-color: #e4e6ea;
+  --shadow: 0px 4px 40px 0px #eee, 0px 4px 8px 0px rgba(66, 71, 76, 0.05),
+    0px 0px 0.5px 0px rgba(66, 71, 76, 0.32);
 
   /* FONT FAMILIES */
   --primary-font: "Montserrat", sans-serif;
@@ -111,17 +115,46 @@ p {
   padding-block: 9rem;
 }
 
-/* CUSTOM CSS */
+/* CUSTOM BTN */
 .btn-primary {
-  padding: 1rem 2rem !important;
-  font-size: 1.4rem !important;
-  border-radius: 0px !important;
+  width: 32% !important;
+  height: 4rem !important;
+  display: block !important;
+  border-radius: 12px !important;
+  gap: 8px !important;
+  font-size: 1.5rem !important;
+  background: #48ec86 !important;
+  color: #292b2e !important;
+  border: none !important;
+  font-weight: 500 !important;
+  transition: var(--transition);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff !important;
+  background: #32a45e !important;
+  cursor: pointer;
+}
+.btn-secondary {
+  width: 32% !important;
+  height: 4rem !important;
+  margin-inline: auto !important;
+  border-radius: 12px !important;
+  gap: 8px !important;
+  font-size: 1.5rem !important;
+  background: var(--dark-black) !important;
   color: var(--white) !important;
-  background-color: var(--green) !important;
-  font-weight: 600 !important;
-  text-transform: capitalize;
-  border: 0.1rem solid transparent !important;
-  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  border: none !important;
+  font-weight: 500 !important;
+  transition: var(--transition);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff !important;
+  background: #0b0b1391 !important;
+  cursor: pointer;
 }
 
 /* TOP SCROLL BUTTON SECTION */
@@ -207,27 +240,26 @@ p {
 }
 
 /* ------------------------------- NAVBAR SECTION ---------------------------------- */
-.navbar {
-  background-color: var(--white) !important;
-  position: fixed !important;
+.header_section {
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   width: 100%;
-  z-index: 1000;
-  border-bottom: 0.2rem solid var(--green);
 }
 
-.animate {
-  animation: navAnimation 0.5s linear;
+header {
+  background-color: var(--light-green);
 }
 
-@keyframes navAnimation {
-  0% {
-    transform: translateY(-10rem);
-  }
-  100% {
-    transform: translateY(0rem);
-  }
+header p {
+  font-size: 1.4rem !important;
+}
+
+.navbar {
+  background-color: var(--white) !important;
+  width: 100%;
+  border-bottom: 0.1rem solid var(--light-white);
 }
 
 .navbar-brand img {
@@ -278,8 +310,22 @@ p {
   opacity: 1;
 }
 
+.nav-btn button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  border: 0.1rem solid var(--light-white);
+  background-color: transparent;
+  transition: var(--transition);
+}
+
+.nav-btn button:hover,
+.nav-btn button:focus {
+  background-color: #f8f8fb;
+}
+
 .dropdown-menu {
-  min-width: 15rem !important;
+  min-width: 14rem !important;
   border-bottom: 0.2rem solid var(--green) !important;
   border-radius: 0.5rem 0.5rem 1rem 1rem !important;
   overflow-x: hidden;
@@ -304,14 +350,14 @@ p {
 /* ------------------------------- HERO SECTION ---------------------------------- */
 .hero_section {
   width: 100%;
-  padding-top: 15rem;
-  padding-bottom: 4rem;
+  padding-top: 10rem;
   background: url("/image/hero-bg.svg");
+  background-size: cover;
 }
 
 .hero_content p {
   font-size: 1.6rem;
-  color: var(--black);
+  color: var(--gray);
   font-family: var(--primary-font);
   font-weight: 500 !important;
 }
@@ -323,99 +369,110 @@ p {
   text-align-last: left;
 }
 
-.hero_img {
-  z-index: 1;
+.hero_bar {
+  max-width: 350px;
+  height: 55px;
+  border-radius: 1rem;
+  border: 1px solid #e4e6ea;
+  padding: 4px;
+  box-shadow: 0px 6px 24px rgb(0 0 0 / 10%);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-.hero_img::before {
-  content: "";
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+.hero_bar:focus {
+  border-color: var(--dark-black);
+}
+
+.hero_bar .form-control {
+  border: none;
   width: 100%;
   height: 100%;
-  background-color: transparent;
-  border: 0.5rem solid var(--green);
-  z-index: -1;
+  font-size: 1.3rem;
+  transition: var(--transition);
 }
+
+.hero_bar button {
+  width: 4.5rem;
+  height: 100%;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.hero_bar button:focus,
+.hero_bar button:hover {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+/* ------------------------------- BENEFIT SECTION ---------------------------------- */
+.benefit_section {
+  background: url(/image/hero-bg.svg) center;
+  background-size: cover;
+}
+
+/* ------------------------------- DESTINATION SECTION ---------------------------------- */
+.dest-card {
+  padding: 3rem 0 0 3rem;
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid #e4e6ea;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.dest-card:hover {
+  border-color: var(--dark-black);
+}
+
+.flag {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.1rem solid var(--white);
+  box-shadow: var(--shadow);
+}
+
+.btn-img img {
+  cursor: pointer;
+  border-bottom-right-radius: 1rem;
+}
+
+/* ------------------------------- REFUND SECTION ---------------------------------- */
+.refund_section {
+  border-radius: 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(242, 253, 235, 1) 0%,
+    rgba(224, 244, 253, 1) 100%
+  );
+  border: 0.1rem solid var(--border-color);
+  /* padding-block: 5 rem; */
+}
+
+.refund_img img {
+  width: 200px !important;
+  display: block;
+  margin-inline: auto;
+}
+
+.refund-content p {
+  max-width: 400px;
+  text-align: justify;
+  text-align-last: left;
+  }
+
 
 /* ------------------------------- PLAN AND REVIEW SECTION ---------------------------------- */
 
 .plan_header p {
   font-size: 1.5rem;
   font-weight: 400;
-}
-
-.filter_btn {
-  margin-top: 3rem !important;
-  width: 30%;
-  height: 4.5rem;
-  margin-inline: auto;
-  border-radius: 5rem;
-  border: 0.2rem solid var(--light-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.filter_btn button {
-  width: 47%;
-  height: 3.5rem;
-  border-radius: 5rem;
-  border: none;
-  font-weight: 600 !important;
-  font-size: 1.4rem;
-  transition: var(--transition);
-}
-
-.filter_btn button.active {
-  color: var(--white);
-  background-color: var(--green);
-}
-
-.plan_img {
-  padding-block: 1rem;
-  border-bottom: 0.1px solid var(--light-white);
-}
-
-.plan_img p {
-  font-size: 1.8rem !important  ;
-  color: var(--blue) !important;
-}
-
-.country_badge {
-  padding: 1rem 2rem;
-  border-radius: 0.6rem;
-  border: 0.1rem solid var(--light-white);
-  font-weight: 700;
-  color: var(--blue);
-  font-family: var(--secondary-font);
-  font-size: 1.2rem;
-}
-
-.plan_content ul li {
-  border-bottom: 0.1px solid var(--light-white);
-}
-
-.plan_btn {
-  display: block;
-  width: 100%;
-  padding-block: 1rem;
-  text-align: center;
-  border: 0.15rem solid var(--green);
-  color: var(--green);
-  border-radius: 0.6rem;
-  background-color: transparent;
-  font-size: 1.4rem;
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  transition: var(--transition);
-}
-
-.plan_btn:hover,
-.plan_btn:focus {
-  color: var(--white);
-  background-color: var(--green);
 }
 
 .review_header {
@@ -445,42 +502,6 @@ p {
 
 .swiper-pagination-bullet-active {
   background-color: var(--green) !important;
-}
-
-/* ------------------------------- REFUND SECTION ---------------------------------- */
-.refund_section {
-  border-radius: 2rem;
-  background-color: #66b9524c;
-  padding-block: 5rem;
-}
-
-.refund_img img {
-  width: 200px !important;
-  display: block;
-  margin-inline: auto;
-}
-
-.refund_content p {
-  max-width: 500px;
-  margin-inline: auto;
-}
-
-.refund_content button {
-  width: 200px;
-  height: 40px;
-  border-radius: 1rem;
-  background-color: var(--dark-black);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 1.4rem;
-  font-family: var(--secondary-font);
-  border: none;
-  transition: var(--transition);
-}
-
-.refund_content button:hover,
-.refund_content button:focus {
-  transform: scale(1.04);
 }
 
 /* ------------------------------- ABOUT PAGE START  ---------------------------------- */
@@ -567,7 +588,7 @@ p {
   transition: var(--transition);
 }
 
-.faq_search_bar button:hover ,
+.faq_search_bar button:hover,
 .faq_search_bar button:focus {
   background-color: var(--blue);
 }
@@ -576,10 +597,9 @@ p {
   padding-block: 1.5rem !important;
   font-size: 1.5rem !important;
   border-bottom: 0.1rem solid var(--light-white) !important;
-
 }
 
-.accordion-button:focus  {
+.accordion-button:focus {
   outline: none !important;
   box-shadow: none !important;
   border-color: var(--green) !important;
@@ -591,9 +611,8 @@ p {
   border-color: var(--green);
 }
 
-
 .accordion-body {
-  font-size: 1.5rem !important; 
+  font-size: 1.5rem !important;
   color: var(--gray);
   text-align: justify;
   text-align-last: left;
@@ -615,9 +634,9 @@ p {
   transition: var(--transition);
 }
 
-.link:hover ,
+.link:hover,
 .link:focus {
-  color : var(--green);
+  color: var(--green);
 }
 
 .contact_form .form-control {
@@ -631,7 +650,7 @@ p {
 }
 
 .submit-btn {
-  width : 12rem;
+  width: 12rem;
   height: 4rem;
   border: none;
   font-weight: 700;
@@ -642,15 +661,13 @@ p {
   transition: var(--transition);
 }
 
-.submit-btn:hover ,
+.submit-btn:hover,
 .submit-btn:focus {
   transform: scale(1.04);
   background-color: var(--blue);
 }
 
 /* ------------------------------- TEAM PAGE SECTION ---------------------------------- */
-
-
 
 /* ------------------------------- FOOTER SECTION ---------------------------------- */
 footer {

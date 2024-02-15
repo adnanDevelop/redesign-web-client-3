@@ -5,9 +5,8 @@
     font-size: 3.5rem !important;
   }
 
-  /* NAVBAR SECTION START  */
-  .navbar {
-    height: 6.5rem;
+  .nav-btn {
+    display: none !important;
   }
 
   .nav-item .nav-link::before {
@@ -47,11 +46,17 @@
     background-color: var(--white);
   }
 
-  /* FILTER  SECTION */
-  .filter_btn  {
-    width: 50%;
+  /* HERO SECTION */
+  .hero_section {
+    padding-top: 15rem !important;
   }
 
+
+
+  /* FILTER  SECTION */
+  .filter_btn {
+    width: 50%;
+  }
 }
 /* MAX-WIDTH 772PX */
 @media (max-width: 772px) {
@@ -86,14 +91,14 @@
     font-size: 1.4rem !important;
   }
 
-  .hero_img::before {
-    top: 1rem;
-    left: 1rem;
-    border: 0.3rem solid var(--green);
-  }
+ .hero_img img {
+  max-width: 300px !important;
+  height: auto;
+ }
+
 
   /* FILTER  SECTION */
-  .filter_btn  {
+  .filter_btn {
     width: 85%;
   }
 
@@ -101,14 +106,11 @@
   .faq_header {
     padding-bottom: 1em !important;
   }
-  
+
   .faq_img img {
-    width:100%;
+    width: 100%;
   }
-
 }
-
-
 
 /* MAX-WIDTH 568PX */
 @media (max-width: 568px) {
@@ -138,6 +140,10 @@
     font-size: 3rem !important;
   }
 
+  /* DESTINATION SECTION */
+  .btn-primary , .btn-primary {
+    width: 50%;
+  }
   /* REVIEW SECTION */
 
   .review_header {
@@ -148,11 +154,7 @@
     padding-bottom: 1.5rem !important;
   }
 
-  /* FAQ PAGE */
-  .accordion-button , .accordion-body {
-    font-size: 1.3rem !important;
-  }
-
+  
 }
 /* MAX-WIDTH 420px */
 @media (max-width: 420px) {
