@@ -51,6 +51,13 @@ body {
   color: var(--blue);
 }
 
+.text-black {
+  color: var(--black);
+}
+.text-dark-black {
+  color: var(--dark-black);
+}
+
 .font-primary {
   font-family: var(--primary-font) !important;
 }
@@ -115,6 +122,10 @@ p {
   padding-block: 9rem;
 }
 
+.margin-block {
+  margin-block: 9rem;
+}
+
 /* CUSTOM BTN */
 .btn-primary {
   width: 32% !important;
@@ -137,8 +148,9 @@ p {
   cursor: pointer;
 }
 .btn-secondary {
-  width: 32% !important;
-  height: 4rem !important;
+  /* width: 32% !important;
+  height: 4rem !important; */
+  padding: 1rem 6rem !important;
   margin-inline: auto !important;
   border-radius: 12px !important;
   gap: 8px !important;
@@ -444,29 +456,6 @@ header p {
 }
 
 /* ------------------------------- REFUND SECTION ---------------------------------- */
-.refund_section {
-  border-radius: 2rem;
-  background: linear-gradient(
-    180deg,
-    rgba(242, 253, 235, 1) 0%,
-    rgba(224, 244, 253, 1) 100%
-  );
-  border: 0.1rem solid var(--border-color);
-  /* padding-block: 5 rem; */
-}
-
-.refund_img img {
-  width: 200px !important;
-  display: block;
-  margin-inline: auto;
-}
-
-.refund-content p {
-  max-width: 400px;
-  text-align: justify;
-  text-align-last: left;
-  }
-
 
 /* ------------------------------- PLAN AND REVIEW SECTION ---------------------------------- */
 
@@ -504,6 +493,20 @@ header p {
   background-color: var(--green) !important;
 }
 
+/* ------------------------------- GOOD BYE SECTION   ---------------------------------- */
+.good-bye-body {
+  padding-block: 5rem !important;
+  background: url(/image/good-bye/goodbye-img.webp) no-repeat center;
+}
+
+.good-by-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  border: 0.1rem solid var(--dark-black);
+  background-color: var(--white);
+}
+
 /* ------------------------------- ABOUT PAGE START  ---------------------------------- */
 .about_header {
   margin-top: 5rem;
@@ -535,20 +538,8 @@ header p {
 
 /* ------------------------------- FAQ PAGE ---------------------------------- */
 .faq_header {
-  margin-top: 10rem;
   width: 100%;
-  padding-bottom: 8rem;
-}
-
-.faq_img img {
-  max-width: 350px;
-  height: auto;
-  object-fit: cover;
-}
-
-.faq_question_img img {
-  width: 90%;
-  height: auto;
+  padding-bottom: 3rem;
 }
 
 .faq_search_bar {
@@ -593,10 +584,15 @@ header p {
   background-color: var(--blue);
 }
 
+.accordion-item {
+  border-radius: 1rem !important;
+}
+
 .accordion-button {
-  padding-block: 1.5rem !important;
+  padding-block: 2rem !important;
   font-size: 1.5rem !important;
   border-bottom: 0.1rem solid var(--light-white) !important;
+  border-radius: 1rem !important;
 }
 
 .accordion-button:focus {
@@ -619,53 +615,51 @@ header p {
 }
 
 /* ------------------------------- CONTACT PAGE SECTION ---------------------------------- */
-.contact_section {
+.contact_hero {
+  width: 100%;
   margin-top: 10rem;
+  padding: 10rem 0;
+  background: url("/image/contact/contact-bg.webp") no-repeat center;
+  background-size: cover;
 }
 
-.address i {
-  font-size: 2.5rem;
-  color: var(--green);
+.contact-card-section {
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 1rem;
 }
 
-.link {
-  font-size: 1.4rem;
-  color: var(--gray);
+.contact_card_design {
+  margin-top: -7rem;
+  z-index: 10;
+}
+
+.contact_card {
+  padding: 1.5rem;
+  border: 0.1rem solid var(--border-color);
+  border-radius: 1rem;
+  background-position: top -25px right -32px;
+  background-repeat: no-repeat;
+  background-size: 150px;
+  cursor: pointer;
   transition: var(--transition);
 }
 
-.link:hover,
-.link:focus {
-  color: var(--green);
+.contact_card:hover ,
+.contact_card:focus {
+  border-color: var(--dark-black);
 }
 
-.contact_form .form-control {
-  border: 0.1rem solid var(--light-white);
-  transition: var(--transition);
-  font-size: 1.4rem;
+.contact_card img {
+  width: 4rem;
+  height: auto;
+  object-fit: cover;
 }
 
-.contact_form .form-control:focus {
-  border-color: var(--green);
+.contact-card-btn i {
+  font-size: 1.8rem;
 }
 
-.submit-btn {
-  width: 12rem;
-  height: 4rem;
-  border: none;
-  font-weight: 700;
-  font-size: 1.4rem;
-  border-radius: 3rem;
-  color: var(--white);
-  background-color: var(--green);
-  transition: var(--transition);
-}
-
-.submit-btn:hover,
-.submit-btn:focus {
-  transform: scale(1.04);
-  background-color: var(--blue);
-}
 
 /* ------------------------------- TEAM PAGE SECTION ---------------------------------- */
 

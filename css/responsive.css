@@ -82,6 +82,10 @@
     padding-block: 4.5rem;
   }
 
+  .margin-block {
+    margin-block: 4.5rem;
+  }
+
   /* HERO SECTION */
   .hero_section {
     padding-top: 10rem;
@@ -96,6 +100,10 @@
   height: auto;
  }
 
+ /* REFUND SECTION */
+ .refund_section {
+  padding: 5rem 0 0 0 ;
+ }
 
   /* FILTER  SECTION */
   .filter_btn {
@@ -141,8 +149,8 @@
   }
 
   /* DESTINATION SECTION */
-  .btn-primary , .btn-primary {
-    width: 50%;
+  .btn-primary  {
+    width: 50% !important;
   }
   /* REVIEW SECTION */
 
@@ -154,6 +162,17 @@
     padding-bottom: 1.5rem !important;
   }
 
+  /* good bye section */
+  .good-bye-body {
+    background-color: #edf9fe;
+    background-image: none;
+    padding-block: 2.5rem !important;
+  }
+
+  /* CONTACT PAGE */
+  .contact_hero  {
+    padding: 5rem 0 10rem 0 ;
+  }
   
 }
 /* MAX-WIDTH 420px */
