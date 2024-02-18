@@ -612,6 +612,290 @@ header p {
   text-align-last: left;
 }
 
+/* ------------------------------- WORK  PAGE SECTION ---------------------------------- */
+.work_header {
+  padding-top: 15rem;
+  background: url(/image/work/work-bg.webp) no-repeat;
+  background-size: cover;
+}
+
+.work_card {
+  padding: 4rem 3rem;
+  border-radius: 2.5rem;
+  border: 0.1rem solid var(--border-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.work_card:hover,
+.work_card:focus {
+  border-color: var(--dark-black);
+}
+
+.work_card_img img {
+  width: 15rem;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-inline: auto;
+}
+
+.bottom-icon img {
+  display: block;
+  margin-inline: auto;
+  margin-block: 4rem;
+  animation: topBottom 1s infinite alternate-reverse;
+}
+
+@keyframes topBottom {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+
+/* ------------------------------- ABOUT MAKE CARD SECTION ---------------------------------- */
+.about-make-card {
+  width: 100%;
+  height: 40rem;
+  padding: 0 3rem 3rem 3rem;
+  border-radius: 2.5rem;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 33.81%,
+      #000000 93.18%
+    ),
+    url(/image/about-card.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inner_card {
+  padding: 4rem 2.5rem;
+  border-radius: 2.5rem !important;
+  border: 0.1rem solid var(--border-color);
+}
+
+.card-img {
+  background-image: linear-gradient(
+    214.35deg,
+    rgba(242, 253, 235, 0.6) -36.9%,
+    rgba(224, 244, 253, 0.6) 98.08%
+  );
+}
+
+.shape_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.mission_section {
+  border: 0.1rem solid var(--border-color);
+  border-radius: 2.5rem;
+}
+
+.mission_content {
+  padding: 4rem;
+}
+
+/* ------------------------------- WORK SECTION ---------------------------------- */
+.device_filter_btn {
+  max-width: 35%;
+  height: 5rem;
+  border-radius: 5rem;
+  background-color: var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-inline: auto;
+}
+
+.device_filter_btn button {
+  width: 46%;
+  height: 3.5rem;
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  color: var(--dark-black);
+  background-color: transparent;
+  border: 0.1rem solid transparent;
+  transition: var(--transition);
+}
+
+.device_filter_btn button.active {
+  color: var(--dark-black);
+  background-color: var(--white);
+  border: 0.1rem solid var(--gray);
+}
+
+.shape_img_one img {
+  width: 15rem;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: -6rem;
+  right: 10rem;
+}
+.shape_img_two img {
+  width: 15rem;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0rem;
+  left: 5%;
+  z-index: -1;
+}
+
+.play_btn {
+  width: 9rem;
+  height: 9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  transition: var(--transition);
+}
+
+.play_btn:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.installation_filter_btn {
+  max-width: 60%;
+  height: 5rem;
+  border-radius: 5rem;
+  background-color: var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-inline: auto;
+}
+
+.installation_filter_btn button {
+  width: 46%;
+  height: 3.5rem;
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  color: var(--dark-black);
+  background-color: transparent;
+  border: 0.1rem solid transparent;
+  transition: var(--transition);
+}
+
+.installation_filter_btn button.active {
+  color: var(--dark-black);
+  background-color: var(--white);
+  border: 0.1rem solid var(--gray);
+}
+
+.install_section {
+  padding: 4rem;
+  border: 2.5rem;
+  border: 0.1rem solid var(--dark-black);
+}
+
+.install_img img {
+  width: 20rem;
+  height: auto;
+  object-fit: cover;
+}
+
+.install_res_content {
+  width: 100%;
+  padding: 1rem;
+  border: 0.1rem solid var(--black);
+  border-radius: 1.5rem;
+}
+
+/* START CARD SECTION */
+.start_card {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  padding: 0 2rem;
+  border: 0.1rem solid var(--border-color);
+  box-shadow: var(--shadow);
+  border-radius: 2.5rem;
+}
+
+.start_badge {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: var(--white);
+  background-color: var(--green);
+}
+
+/* STEP CARD */
+.step_card {
+  height: 20rem;
+  padding: 4rem 3rem;
+  flex-direction: column;
+  border: 0.1rem solid var(--border-color);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.step_img img {
+  width: 20rem;
+  display: block;
+  z-index: 10;
+  margin-inline: auto;
+  margin-top: -8rem;
+}
+
+/* ESIM SECTION */
+
+.esim_card {
+  border: 0.1rem solid var(--border-color);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.esim_img img {
+  width: 100%;
+  height: auto;
+}
+
+.talk_card {
+  border: 0.1rem solid var(--border-color);
+  border-radius: 2rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.talk_card::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(
+    135deg,
+    white 25%,
+    #fde1715a 37.5%,
+    #ef977153,
+    #996a6e63 62.5%,
+    white 75%
+  );
+  background-position:  center;
+  opacity: 1;
+  background-size: 400% auto;
+  z-index: -1;
+}
+
 /* ------------------------------- CONTACT PAGE SECTION ---------------------------------- */
 .contact_hero {
   width: 100%;
@@ -736,53 +1020,6 @@ textarea {
   object-fit: cover;
 }
 
-/* ------------------------------- ABOUT MAKE CARD SECTION ---------------------------------- */
-.about-make-card {
-  width: 100%;
-  height: 40rem;
-  padding: 0 3rem 3rem 3rem;
-  border-radius: 2.5rem;
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 33.81%,
-      #000000 93.18%
-    ),
-    url(/image/about-card.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.inner_card {
-  padding: 4rem 2.5rem;
-  border-radius: 2.5rem !important;
-  border: 0.1rem solid var(--border-color);
-}
-
-.card-img {
-  background-image: linear-gradient(
-    214.35deg,
-    rgba(242, 253, 235, 0.6) -36.9%,
-    rgba(224, 244, 253, 0.6) 98.08%
-  );
-}
-
-.shape_img {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/* ------------------------------- MISSION SECTION ---------------------------------- */
-.mission_section {
-  border: 0.1rem solid var(--border-color);
-  border-radius: 2.5rem ;
-}
-
-.mission_content {
-  padding: 4rem ;
-}
-
-
 /* ------------------------------- FOOTER SECTION ---------------------------------- */
 footer {
   margin-top: 8rem;
@@ -884,6 +1121,15 @@ footer {
 
 .subscribe_input .form-control:focus {
   border-color: var(--green);
+}
+
+.btn-footer {
+  padding-inline: 2.5rem;
+  height: 4.2rem;
+  color: var(--white);
+  background-color : var(--green);
+  border: 0.1rem solid transparent;
+  font-size: 1.4rem;
 }
 
 .subfooter p {

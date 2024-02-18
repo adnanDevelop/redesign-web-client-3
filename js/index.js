@@ -94,3 +94,16 @@ filterBtn.forEach((element) => {
     }
   });
 });
+
+
+
+// DEVICE BUTTON
+const deviceBtn = document.querySelectorAll('.device_filter_btn button');
+console.log(deviceBtn);
+
+deviceBtn.forEach(element => {
+  element.addEventListener('click' , () => {
+    deviceBtn.forEach(element => element.classList.remove('active'))
+    element.classList.add('active')
+  })
+})

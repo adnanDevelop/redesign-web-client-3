@@ -57,7 +57,8 @@
   }
 
   /* QUESTION SECTION */
-  .question , .question_two {
+  .question,
+  .question_two {
     padding: 4rem 2.5rem;
   }
 
@@ -65,11 +66,9 @@
     max-width: 100%;
   }
 
-  .question-img img  {
+  .question-img img {
     position: static;
   }
-
-
 }
 /* MAX-WIDTH 772PX */
 @media (max-width: 772px) {
@@ -130,6 +129,32 @@
 
   .faq_img img {
     width: 100%;
+  }
+
+  /* DEVICE SECTION */
+  .device_filter_btn {
+    max-width: 70%;
+  }
+
+  .installation_filter_btn {
+    max-width: 90%;
+  }
+
+  .installation_filter_btn button {
+    font-size: 1.2rem;
+  }
+
+  .shape_img_one img,
+  .shape_img_two img {
+    display: none;
+  }
+
+  .esim_img img {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin-inline: auto;
   }
 }
 
@@ -210,9 +235,13 @@
 
   /* MISSION SECTION */
   .mission_content {
-    padding: 2rem ;
+    padding: 2rem;
   }
 
+  /* DEVICE SECTION */
+  .device_filter_btn {
+    max-width: 80%;
+  }
 }
 /* MAX-WIDTH 420px */
 @media (max-width: 420px) {
