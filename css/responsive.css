@@ -51,12 +51,25 @@
     padding-top: 15rem !important;
   }
 
-
-
   /* FILTER  SECTION */
   .filter_btn {
     width: 50%;
   }
+
+  /* QUESTION SECTION */
+  .question , .question_two {
+    padding: 4rem 2.5rem;
+  }
+
+  .question_content {
+    max-width: 100%;
+  }
+
+  .question-img img  {
+    position: static;
+  }
+
+
 }
 /* MAX-WIDTH 772PX */
 @media (max-width: 772px) {
@@ -95,15 +108,15 @@
     font-size: 1.4rem !important;
   }
 
- .hero_img img {
-  max-width: 300px !important;
-  height: auto;
- }
+  .hero_img img {
+    max-width: 300px !important;
+    height: auto;
+  }
 
- /* REFUND SECTION */
- .refund_section {
-  padding: 5rem 0 0 0 ;
- }
+  /* REFUND SECTION */
+  .refund_section {
+    padding: 5rem 0 0 0;
+  }
 
   /* FILTER  SECTION */
   .filter_btn {
@@ -128,6 +141,10 @@
     font-size: 2.2rem !important;
   }
 
+  h3 {
+    font-size: 1.8rem !important  ;
+  }
+
   h4 {
     font-size: 1.8rem !important;
   }
@@ -149,7 +166,7 @@
   }
 
   /* DESTINATION SECTION */
-  .btn-primary  {
+  .btn-primary {
     width: 50% !important;
   }
   /* REVIEW SECTION */
@@ -170,10 +187,32 @@
   }
 
   /* CONTACT PAGE */
-  .contact_hero  {
-    padding: 5rem 0 10rem 0 ;
+  .contact_hero {
+    padding: 5rem 0 10rem 0;
   }
-  
+
+  .form-check-input {
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+  }
+
+  .form-check-label {
+    font-size: 1.2rem !important;
+  }
+
+  .inner_card {
+    padding: 2.5rem;
+  }
+
+  .shape_img {
+    display: none;
+  }
+
+  /* MISSION SECTION */
+  .mission_content {
+    padding: 2rem ;
+  }
+
 }
 /* MAX-WIDTH 420px */
 @media (max-width: 420px) {

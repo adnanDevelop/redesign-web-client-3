@@ -19,73 +19,114 @@
     <title>About Page</title>
   </head>
   <body>
-    <!-------------------------------- NAVBAR SECTION ------------------------------ -->
-    <nav class="navbar navbar-expand-lg bg-white">
-      <div class="container px-sm-2 px-4">
-        <a class="navbar-brand" href="#">
-          <img src="image/logo.png" alt="" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+    <!-------------------------------- HEADER AND NAVBAR SECTION ------------------------------ -->
+    <div class="header_section">
+      <header class="text-center py-3">
+        <p class="mb-0">
+          <i class="fa fa-whatsapp text-black"></i>
+          <span class="fw-light text-black">Whatsapp 24/7:</span>
+          <a href="tel:+36702039596" class="text-black" style="font-weight: 600"
+            >+36 70-203-9596</a
+          >
+        </p>
+      </header>
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div
+          class="container d-flex align-items-center justify-content-between px-sm-2 px-4"
         >
-          <i class="fa-solid fa-bars-staggered"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link close_nav"
-                aria-current="page"
-                href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link close_nav" href="About.html">about us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link close_nav" href="Faq.html">faq</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link close_nav" href="Plan.html">plan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link close_nav" href="Contact.html">contact us</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item">English</a></li>
-                <li><a class="dropdown-item">Arabic</a></li>
-                <li><a class="dropdown-item">Hebrew</a></li>
-                <li><a class="dropdown-item">Hindi</a></li>
-                <li><a class="dropdown-item">Spanish</a></li>
-                <li><a class="dropdown-item">Turkish</a></li>
-              </ul>
-            </li>
-          </ul>
+          <a class="navbar-brand" href="#">
+            <img src="image/logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link close_nav"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link close_nav" href="About.html">about us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link close_nav" href="Work.html">How its work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link close_nav" href="Contact.html">contact us</a>
+              </li>
+              <li class="nav-item dropdown d-lg-none d-block">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-globe"></i
+                  ><span class="ms-2">EN - EURO </span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">English</a></li>
+                  <li><a class="dropdown-item">Arabic</a></li>
+                  <li><a class="dropdown-item">Hebrew</a></li>
+                  <li><a class="dropdown-item">Hindi</a></li>
+                  <li><a class="dropdown-item">Spanish</a></li>
+                  <li><a class="dropdown-item">Turkish</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-btn d-lg-block d-none">
+            <div class="d-flex gap-3">
+              <button type="button">Login</button>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-globe"></i
+                  ><span class="ms-2">EN - EURO </span>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item">English</a></li>
+                    <li><a class="dropdown-item">Arabic</a></li>
+                    <li><a class="dropdown-item">Hebrew</a></li>
+                    <li><a class="dropdown-item">Hindi</a></li>
+                    <li><a class="dropdown-item">Spanish</a></li>
+                    <li><a class="dropdown-item">Turkish</a></li>
+                  </ul>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
 
     <!-------------------------------- ABOUT HERO SECTION ------------------------------ -->
     <div
       class="about_page"
-      style="padding-top: 12rem; padding-bottom: 5rem ; background-image: url(/image/hero-bg.svg)"
+      style="
+        padding-top: 12rem;
+        padding-bottom: 5rem;
+        background-image: url(/image/hero-bg.svg);
+      "
     >
       <div class="container px-sm-2 px-4">
         <div class="row d-flex align-items-center">
@@ -94,7 +135,13 @@
               <h1 class="fw-bold font-secondary text-black mb-4">
                 About <span class="text-green">eSIM360</span>
               </h1>
-              <p style="text-align: justify; text-align-last: left; max-width: 450px;">
+              <p
+                style="
+                  text-align: justify;
+                  text-align-last: left;
+                  max-width: 450px;
+                "
+              >
                 At ESIM360, our mission is dedicated to transforming global
                 travel connectivity. Our goal is to liberate travelers worldwide
                 from the confines of roaming restrictions that have persisted
@@ -133,6 +180,215 @@
             </div>
           </div>
         </div> -->
+      </div>
+    </div>
+
+    <!------------------------------ ABOUT MAKE SECTION --------------------------- -->
+    <div class="about-make-section padding-block">
+      <div class="container px-sm-2 px-4">
+        <div class="row">
+          <div class="col-12 mb-5">
+            <div class="about-make-title text-center">
+              <h2 class="text-capitalize">That is what makes us unique</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD SECTION -->
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-4 mb-lg-0 mb-4">
+            <div class="about-make-card">
+              <div
+                class="about-make-content d-flex align-items-start justify-content-end h-100 flex-column"
+              >
+                <h3 class="text-white fw-bold mb-4">We enjoy what we do</h3>
+                <p
+                  class="text-white"
+                  style="text-align: justify; text-align-last: left"
+                >
+                  Our passion for providing peace of mind to travelers around
+                  the world drives everything we do. We love our work and we do
+                  it with pride.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row g-4">
+              <div class="col-lg-12 col-md-6 mb-lg-2">
+                <div class="inner_card">
+                  <div class="card_icon mb-4">
+                    <img src="image/make-card/img-1.svg" alt="" />
+                  </div>
+                  <div class="inner_card_content">
+                    <h3 class="font-secondary my-4">
+                      We help you wherever you are
+                    </h3>
+                    <p
+                      class="font-secondary text-black"
+                      style="text-align: justify; text-align-last: left"
+                    >
+                      We believe that providing exceptional customer service is
+                      as important as offering quality products. Our support
+                      team is available 24/7 so you can enjoy your trip without
+                      stress.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-6 mt-lg-4">
+                <div class="inner_card">
+                  <div class="card_icon mb-4">
+                    <img src="image/make-card/img-2.svg" alt="" />
+                  </div>
+                  <div class="inner_card_content">
+                    <h3 class="font-secondary my-4">
+                      We give you peace of mind
+                    </h3>
+                    <p
+                      class="font-secondary text-black"
+                      style="text-align: justify; text-align-last: left"
+                    >
+                      Activation in just a few clicks, the best network in each
+                      country, unlimited data, management of your eSIM from the
+                      app… We do everything we can to make your internet
+                      connection easy and without surprises.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-lg-0 mt-4">
+            <div class="inner_card card-img position-relative overflow-hidden">
+              <img class="shape_img" src="image/make-card/shape.svg" alt="" />
+              <div class="card_icon mb-4">
+                <img src="image/make-card/img-3.svg" alt="" />
+              </div>
+              <div class="inner_card_content">
+                <h3 class="font-secondary my-4">We care about our planet</h3>
+                <p
+                  class="font-secondary text-black"
+                  style="text-align: justify; text-align-last: left"
+                >
+                  We are committed to reducing our carbon footprint and
+                  implementing sustainable practices in all areas of our
+                  business. The future must be preserved for future generations.
+                </p>
+                <a
+                  href="#"
+                  class="d-block mt-4 text-black"
+                  style="font-size: 1.4rem"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------ MISSION SECTION --------------------------- -->
+    <div class="margin-block">
+      <div class="container px-sm-2 px-4">
+        <div class="row">
+          <div class="col-lg-10 mx-auto mission_section overflow-hidden">
+            <div class="row">
+              <div class="col-lg-7 mb-lg-0 mb-4">
+                <div class="mission_content">
+                  <h2 class="font-secondary text-dark-black mb-4">
+                    Join us in our mission
+                  </h2>
+                  <p class="font-secondary text-black">
+                    Be part of something big! Together we can get travelers from
+                    all over the world to enjoy the best connection.
+                  </p>
+                  <p class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-black font-secondary"
+                      >Check out our vacancies</a
+                    >
+                    <i
+                      class="fa fa-arrow-right text-black"
+                      style="font-size: 1.5rem"
+                    ></i>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="mission_img">
+                  <img src="image/mission-img.webp" class="img-fluid" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------ FIND  SECTION --------------------------- -->
+    <div class="find_section padding-block">
+      <div class="container px-sm-2 px-4">
+        <div class="row d-flex align-items-start">
+          <div class="col-12 mb-5 text-center find_title">
+            <h2 class="font-secondary text-black">Where can you find us</h2>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="find_card d-flex align-items-center gap-3">
+              <img src="image/find/img-1.webp" alt="" />
+              <div class="find_content">
+                <h5 class="text-black font-secondary" style="font-size: 1.8rem">
+                  Dublin 2, Ireland
+                </h5>
+                <p class="mb-0 fw-light text-black">
+                  6th floor, 2 Grand Canal Square Vat: 4195777WH
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="find_card d-flex align-items-center gap-3">
+              <img src="image/find/img-2.webp" alt="" />
+              <div class="find_content">
+                <h5 class="text-black font-secondary" style="font-size: 1.8rem">
+                  Medellín, Colombia
+                </h5>
+                <p class="mb-0 fw-light text-black">
+                  Career number 42 # 5 South-145 El Poblado
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="find_card d-flex align-items-center gap-3">
+              <img src="image/find/img-3.webp" alt="" />
+              <div class="find_content">
+                <h5 class="text-black font-secondary" style="font-size: 1.8rem">
+                  Lima, Perú
+                </h5>
+                <p class="mb-0 fw-light text-black">
+                  338 Andres Reyes Avenue San Isidro
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="find_card d-flex align-items-center gap-3">
+              <img src="image/find/img-4.webp" alt="" />
+              <div class="find_content">
+                <h5 class="text-black font-secondary" style="font-size: 1.8rem">
+                  Bangkok, Thailand
+                </h5>
+                <p class="mb-0 fw-light text-black">
+                  No.8 , T-One Building 15 floors, Sukhumvit, 40 Alley Khet
+                  Khlong Toei
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -319,27 +575,6 @@
               </div>
             </div>
             <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!------------------------------ REFUND SECTION --------------------------- -->
-    <div class="container px-sm-2 px-4 refund_section">
-      <div class="row">
-        <div class="col-lg-7 col-md-8 mx-auto px-md-4">
-          <div class="refund_img mb-md-5 mb-4">
-            <img src="image/refund-img.png" alt="" />
-          </div>
-          <div class="refund_content text-center">
-            <h2 class="fw-bold font-secondary">
-              Change of plans? No problem at all!
-            </h2>
-            <p class="font-secondary px-md-5 my-4">
-              Purchase your Holafly eSIM with added peace of mind. You have up
-              to 6 months to request a refund.
-            </p>
-            <button type="button">Learn More</button>
           </div>
         </div>
       </div>
